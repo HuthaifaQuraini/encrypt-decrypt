@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="encrypt.FXMLDocumentController">
+   <children>
+      <JFXTextField fx:id="txt1" focusColor="#3a0ea7" labelFloat="true" layoutX="32.0" layoutY="120.0" opacity="0.7" prefHeight="40.0" prefWidth="480.0" promptText="Enter text to encrypt or decrypt !" unFocusColor="BLACK">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txt2" focusColor="#3a0ea7" labelFloat="true" layoutX="32.0" layoutY="220.0" opacity="0.7" prefHeight="40.0" prefWidth="480.0" text="After edit !" unFocusColor="BLACK">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="B1" layoutX="64.0" layoutY="412.0" onAction="#Encrypt" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #ffa700;" text="Encrypt" textFill="WHITE" wrapText="true" />
+      <JFXButton fx:id="B2" layoutX="378.0" layoutY="412.0" onAction="#Decrypt" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #ffa700;" text="Decrypt" textFill="WHITE" wrapText="true">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></JFXButton>
+      <Label layoutX="24.0" layoutY="491.0" text="By: Hodaifa A Quriani">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <JFXToolbar maxHeight="80.0" maxWidth="688.0" prefHeight="80.0" prefWidth="688.0" style="-fx-background-color: #ffa700;">
+         <right>
+            <JFXToggleButton fx:id="JT" text="File Mode" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  String Encrypter" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Text>
+         </left>
+      </JFXToolbar>
+      <JFXButton fx:id="Swap" layoutX="553.0" layoutY="160.0" onAction="#replace" prefHeight="39.0" prefWidth="67.0" style="-fx-background-color: #ffa700;" text="Swap" textFill="WHITE" wrapText="true" />
+      <JFXButton fx:id="B3" layoutX="64.0" layoutY="412.0" onAction="#Encrypt_File" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #ffa700;" text="Encrypt  to file" textFill="WHITE" visible="false" wrapText="true" />
+      <JFXButton fx:id="B4" layoutX="300.0" layoutY="412.0" onAction="#Decrypt_File" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #ffa700;" text="Decrypt  to file" textFill="WHITE" visible="false" wrapText="true">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
+      <JFXTextField fx:id="txt3" focusColor="#3a0ea7" labelFloat="true" layoutX="32.0" layoutY="120.0" opacity="0.7" prefHeight="40.0" prefWidth="480.0" promptText="The text in file is :" unFocusColor="BLACK" visible="false">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="Read" layoutX="533.0" layoutY="221.0" onAction="#Read_file" prefHeight="39.0" prefWidth="147.0" style="-fx-background-color: #ffa700;" text="Open file" textFill="WHITE" visible="false" wrapText="true" />
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>
